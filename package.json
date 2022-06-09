@@ -1,0 +1,19 @@
+{
+  "name": "react-shop",
+  "version": "1.0.0",
+  "description": "curso de react-eshop",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "JavaScript"
+  ],
+  "author": "Carlos Castro <kastro777333@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
