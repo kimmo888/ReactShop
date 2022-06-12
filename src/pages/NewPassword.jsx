@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/Login.scss';
-import logo from '../../public/images/logos/logo_yard_sale.svg';
+import Logo from '../../public/images/logos/logo_yard_sale.svg';
 
-const Login = () => {
+const NewPassword = () => {
     return(
     <div className="login">
         <div className="form-container">
-            <img src={logo} alt="logo" className="logo"/>
-            <h1 className="title">Create a new Password</h1>
+            <img src={Logo} alt="logo" className="logo"/>
+            <h1 className="title1">Create a new Password</h1>
             <p className="subtitle">Enter a new Password for you account</p>
             <form action="/" className="form">
                 <label for="password" className="label">Password</label>
@@ -20,4 +20,4 @@ const Login = () => {
     </div>
     );
 }
-export default Login;
+export default NewPassword;
