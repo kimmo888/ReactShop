@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/Other.scss';
-import logo from '../../public/images/logos/logo_yard_sale.svg';
-import iconMenu from '../../public/images/icons/icon_menu.svg';
+import '@styles/Other.scss';
+import logo from '../Assets/logos/logo_yard_sale.svg';
+import iconMenu from '../Assets/icons/icon_menu.svg';
 import iconShoppingCar from '../../public/images/icons/icon_shopping_cart.svg';
-
+//import logo from '@logos/logo_yard_sale.svg'  //usando alias
 
 const Header = () => {
     return (
