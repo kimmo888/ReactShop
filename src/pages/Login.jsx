@@ -1,21 +1,33 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Logo from '../../public/images/logos/logo_yard_sale.svg';
 import '../styles/Login.scss';
 
+
 const Login = () => {
+    const form = useRef(null);
+
+    const handleSubmit = ()=>{  //si no se pone type="button" en el botón manda la info y no se ve la captura de la info pra esto podemos, poner como valor en el const handleSubmit = (event)=>{, y en la parte de abajo ponemos event.preventDefault(); para que no mande la información y se mantenga en la misma pagina, pero es mas sencillo poner en la etiqueta del button que ejecuta la accion type="button"
+        const formData = new FormData(form.current);
+        const data = {
+            username: formData.get('email'),
+            password: formData.get('new-password')
+        }
+        console.log(data);
+    }
+
     return (
-        <div class="login">
-            <div class="form-container">
-                <img src={Logo} alt="logo" class="logo" />
-                <form action="/" class="form">
-                    <label for="email" class="label">Email address</label>
-                    <input type="text" id="email" placeholder="your@emal.com" class="input input-email" />
-                    <label for="new-password" class="label">Password</label>
-                    <input type="password" id="new-password" placeholder="*********" class="input" />
-                    <input type="submit" value="Log in" class="primary-button login-button" />
+        <div className="login">
+            <div className="form-container">
+                <img src={Logo} alt="logo" className="logo" />
+                <form action="/" className="form" ref ={form} >
+                    <label htmlFor="email" className="label">Email address</label>
+                    <input type="text" name="email" placeholder="your@emal.com" className="input input-email" />
+                    <label htmlFor="new-password" className="label">Password</label>
+                    <input type="password" name="new-password" placeholder="*********" className="input" />
+                    <button type="button" className="primary-button login-button" onClick={handleSubmit}> Log In</button>
                     <a href="/">Forgot my password</a>
                 </form>
-                <button class="secondary-button signup-button">Sign up</button>
+                <button className="secondary-button signup-button"  >Sign up</button>
             </div>
         </div>
     )
