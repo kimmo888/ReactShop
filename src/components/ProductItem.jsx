@@ -1,17 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/Other.scss';
-import ButtonAdd from '../../public/images/icons/bt_add_to_cart.svg';
+import ButtonAdd from '@icon/bt_add_to_cart.svg';
 
-const ProductItem = () => {
+const ProductItem = ( {product} ) => { // poner el parámetro a iterar en este caso product que es el resultado de el hooks useGetProducts.js
+    const [cart, setCart] = useState([]); // se declara el valor inicial del elemento setCart, los valores por defecto son vacíos, por que si no se muestra en la web con el valor que se ponga.
+
+    const handleClick = () => { // por, sobre el evento  onClick
+        setCart([]);
+    }
+    const { id, title, price, images } = product; //forma para desestructurar los props de react en este caso product.
+
     return (
         <div className="products-card">
-                <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Bike" />
+                <img src={images} alt={title} />
                 <div className="product-info">
                     <div>
-                        <p>$120.00</p>
-                        <p>Bike</p>
+                        <p>$ {price} </p>
+                        <p> {title} </p>
                     </div>
-                    <figure>
+                    <figure onClick={handleClick}>
                         <img src={ButtonAdd} alt="button Add" />
                     </figure>
                 </div>
