@@ -11,14 +11,14 @@ const useInitialState = ()=>{
     const addToCart = (payload)=>{ //payload es el nombre que se pone por convención
         setState({
             ...state,
-            cart:[ ...state.cart, payload ]
+            cart:[ ...state.cart, {...payload, idCart:state.cart.length+1}, ]
         });
     };
 
     const removeFromCart = (payload)=>{
         setState({
             ...state,
-            cart: state.cart.filter(product => product.id !== payload.id),
+            cart: state.cart.filter(item => item.idCart !== payload.idCart),
         });
     }
 
