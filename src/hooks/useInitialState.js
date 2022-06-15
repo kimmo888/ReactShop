@@ -11,7 +11,7 @@ const useInitialState = ()=>{
     const addToCart = (payload)=>{ //payload es el nombre que se pone por convención
         setState({
             ...state,
-            cart:[ ...state.cart, {...payload, idCart:state.cart.length+1}, ]
+            cart:[ ...state.cart, {...payload, idCart:state.cart.length+1}, ]  // aca ponemos idCart para que no se repita el id del elemento en el carrito de compras y le sumamos 1 para que no se repita el id del elemento en el carrito de compras, asi si se borra un elemento con el mismo nombre no se borra el elemento anterior.
         });
     };
 
