@@ -360,12 +360,27 @@ nav{
     height: 50px;
 }
  /* estilos de cart mobile y desktop ------------------------------- */
+@keyframes swipeLeft {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 360px;
+    }
+}
 .product-detail-cart{
     width: 360px;
     padding: 24px;
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    bottom: auto;
+    overflow-y: auto;
+    height: 350px;
+    background-color: white;
+    border-radius: 6px;
+    border: 1px solid var(--very-light-pink);
+    animation: swipeLeft 0.26s ease;
 }
 .title-container{
     display: flex;

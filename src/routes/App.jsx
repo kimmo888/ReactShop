@@ -11,15 +11,15 @@ import CreateAccount from '../pages/CreateAccount';
 import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 import NotFound from '../pages/NotFound';
-import AppContext from '../context/AppContext';
-import useInitialState from '../hooks/useInitialState';
+import AppContext from '../context/AppContext'; //importamos AppContext
+import useInitialState from '../hooks/useInitialState'; //importamos useInitialState
 import '../styles/global.css';
 
 
 const App = () => {
-    const initialState = useInitialState();
+    const initialState = useInitialState(); //agregamos esta linea
     return(
-        <AppContext.Provider value={initialState}>
+        <AppContext.Provider value={initialState}> {/* damos el valor initialState */}
             <BrowserRouter>
                 <Layout>
                     <Routes>
