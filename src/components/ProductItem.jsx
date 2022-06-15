@@ -11,15 +11,15 @@ const ProductItem = ( {product} ) => { // poner el parámetro a iterar en este c
     const handleClick = item => { // por, sobre el evento  onClick
         addToCart(item);
     }
-    const { id, title, price, images } = product; //forma para desestructurar los props de react en este caso product.
+    //const { id, title, price, images } = product; //forma para desestructurar los props de react en este caso product.
 
     return (
         <div className="products-card">
-                <img src={images} alt={title} />
+                <img src={product.images} alt={product.title} />
                 <div className="product-info">
                     <div>
-                        <p>$ {price} </p>
-                        <p> {title} </p>
+                        <p>$ {product.price} </p>
+                        <p> {product.title} </p>
                     </div>
                     <figure onClick={()=> handleClick(product)}>
                         <img src={ButtonAdd} alt="button Add" />
