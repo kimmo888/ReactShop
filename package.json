@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "curso de react-eshop",
   "main": "src/index.js",
+  "homepage": "https://kimmo888.github.io/ReactShop/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "react",
@@ -31,6 +33,7 @@
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "gh-pages": "^4.0.0",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.52.3",
     "style-loader": "^3.3.1",
