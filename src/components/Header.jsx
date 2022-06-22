@@ -38,16 +38,16 @@ const Header = () => {
                     <a href="/ReactShop/">Clothes</a>
                 </li>
                 <li>
-                    <a href="/">Electronics</a>
+                    <Link to="/">Electronics</Link>
                 </li>
                 <li>
-                    <a href="/">Furnitures</a>
+                    <Link to="/">Furnitures</Link>
                 </li>
                 <li>
-                    <a href="/">Toys</a>
+                    <Link to="/">Toys</Link>
                 </li>
                 <li>
-                    <a href="/">Others</a>
+                    <Link to="/">Others</Link>
                 </li>
             </ul>
         </div>

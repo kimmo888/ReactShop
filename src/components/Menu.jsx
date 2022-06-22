@@ -10,7 +10,7 @@ const Menu = ({ toggleOrders, setToggleOrders }) => {
         <div className="desktop-menu">
             <ul>
                 <li className="title2" onClick={() => setToggleOrders(true)}>
-                    <a href=''   >My orders</a>
+                    <Link to=''   >My orders</Link>
                 </li>
                 <li>
                     <Link to="/Login" className="title2">My account</Link>
