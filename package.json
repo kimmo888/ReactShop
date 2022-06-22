@@ -1,0 +1,39 @@
+{
+  "name": "react-shop",
+  "version": "1.0.0",
+  "description": "curso de react-eshop",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack serve --open"
+  },
+  "keywords": [
+    "react",
+    "JavaScript"
+  ],
+  "author": "Carlos Castro <kastro777333@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "axios": "^0.27.2",
+    "babel-loader": "^8.2.5",
+    "html-loader": "^3.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
+    "sass-loader": "^13.0.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.52.3",
+    "style-loader": "^3.3.1",
+    "webpack-dev-server": "^4.9.2"
+  }
+}
