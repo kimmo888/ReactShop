@@ -7,7 +7,7 @@ import logo from '@logos/logo_yard_sale.svg';
 import AppContext from '@context/AppContext';
 import iconMenu from '@icon/icon_menu.svg';
 import iconShoppingCar from '@icon/icon_shopping_cart.svg';
-//import logo from '@logos/logo_yard_sale.svg'  //usando alias
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -32,10 +32,10 @@ const Header = () => {
             <img src={logo} alt="logo" className="logo1"/>
             <ul>
                 <li>
-                    <a href="/">all</a>
+                    <Link to="/">all</Link>
                 </li>
                 <li>
-                    <a href="/">Clothes</a>
+                    <a href="/ReactShop/">Clothes</a>
                 </li>
                 <li>
                     <a href="/">Electronics</a>
