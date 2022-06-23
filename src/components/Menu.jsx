@@ -1,28 +1,26 @@
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 import Orders from '@pages/Orders';
-import AppContext from '@context/AppContext';
 import '@styles/Other.scss';
 import { Link } from 'react-router-dom';
 
-const Menu = ({ toggleOrders, setToggleOrders }) => {
-    const { state } = useContext(AppContext);
+const Menu = () => {
+    const [ toggleOrders, setToggleOrders ] = useState(false);
     return (
         <div className="desktop-menu">
             <ul>
-                <li className="title2" onClick={() => setToggleOrders(true)}>
-                    <Link to=''   >My orders</Link>
+                <li>
+                    <Link to='/' className="title2" onClick={() => setToggleOrders(true)} >My orders</Link>
                 </li>
                 <li>
-                    <Link to="/Login" className="title2">My account</Link>
+                    <Link to="/Account" className="title2">My account</Link>
                 </li>
                 <li>
-                    <a href="/">Sign out</a>
+                    <Link to="/Login">Sign out</Link>
                 </li>
             </ul>
             <div>
-            {state.toggleOrders && <Orders setToggleOrders={setToggleOrders}/>}
+            {toggleOrders && <Orders setToggleOrders={setToggleOrders}/>}
             </div>
-            {toggleOrders ? <Orders /> : ""}
         </div>
     )
 }

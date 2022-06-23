@@ -1,7 +1,15 @@
 import React from 'react';
 import '@styles/Login.scss';
+import { useNavigate } from 'react-router-dom';
 
 const CreateAccount = () => {
+
+    let navigate = useNavigate();
+
+    const handleSubmit = () => {
+        navigate('/Login');
+    }
+
     return (
         <div class="login">
             <div class="form-container">
@@ -15,7 +23,7 @@ const CreateAccount = () => {
                         <label for="password" class="label">Password</label>
                         <input type="password" id="password" placeholder="*********" class="input input-password" />
                     </div>
-                    <input type="submit" value="Create" class="primary-button login-button" />
+                    <input type="submit" value="Create" class="primary-button login-button" onClick={handleSubmit} />
                 </form>
             </div>
         </div>

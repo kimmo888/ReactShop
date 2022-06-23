@@ -1,6 +1,8 @@
 import React, {useRef} from 'react';
 import Logo from '@logos/logo_yard_sale.svg';
 import '@styles/Login.scss';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
@@ -15,6 +17,17 @@ const Login = () => {
         console.log(data);
     }
 
+    let navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/Signup');
+    }
+
+    const handleUrl = ()=>{
+        navigate('/');
+    }
+
+
     return (
         <div className="login">
             <div className="form-container">
@@ -24,10 +37,10 @@ const Login = () => {
                     <input type="text" name="email" placeholder="your@emal.com" className="input input-email" />
                     <label htmlFor="new-password" className="label">Password</label>
                     <input type="password" name="new-password" placeholder="*********" className="input" />
-                    <button type="button" className="primary-button login-button" onClick={handleSubmit}> Log In</button>
-                    <a href="/">Forgot my password</a>
+                    <button type="button" className="primary-button login-button" onClick={handleUrl} onClickCapture={handleSubmit} > Log In</button>
+                    <Link to="/PasswordRecovery">Forgot my password</Link>
                 </form>
-                <button className="secondary-button signup-button"  >Sign up</button>
+                <button className="secondary-button signup-button" onClick={handleClick}> Sign up </button>
             </div>
         </div>
     )
