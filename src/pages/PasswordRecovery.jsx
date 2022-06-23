@@ -1,8 +1,16 @@
 import React from 'react';
-import '../styles/PasswordRecovery.scss';
+import '@styles/PasswordRecovery.scss';
 import logo from '@logos/logo_yard_sale.svg'
+import { useNavigate } from 'react-router-dom';
 
 const PasswordRecovery = () => {
+
+	let navigate = useNavigate();
+
+	const handleClick = () => {
+		navigate('/SendEmail');
+	}
+
 	return (
 		<div className="PasswordRecovery">
 			<div className="PasswordRecovery-container">
@@ -12,7 +20,7 @@ const PasswordRecovery = () => {
 				<form action="/" className="form">
 					<label htmlFor="email" className="label">Email address</label>
 					<input type="text" id="email" className="input input-email" />
-					<input type="submit" value="Confirm" className="primary-button login-button" />
+					<input type="submit" value="Confirm" className="primary-button login-button" onClick={handleClick} />
 				</form>
 			</div>
 		</div>

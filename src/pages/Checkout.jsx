@@ -1,25 +1,34 @@
-import React from 'react';
-import OrderItem from '../components/OrderItem';
-import Menu from '../components/Menu';
-import MobileMenu from '../components/MobileMenu';
-import '../styles/Other.scss';
+import React, {useContext} from 'react';
+import OrderItem from '@components/OrderItem';
+import AppContext from '@context/AppContext';
+import '@styles/Other.scss';
 
-const Checkout = () => {
+const Checkout = ({ setToggle }) => {
+    const { state } = useContext(AppContext);
+
+    const today = new Date(Date.now()).toLocaleString().split(', ')[0];
+    const sumTotal = () => {
+        return state.cart.reduce((total, product) => total + product.price, 0);
+    }
+
     return (
         <div className="my-order">
             <div className="my-order-container">
-                <h1 className="title">My Order</h1>
+            <div className="title-container" onClick={() => setToggle(false)}>
+					<h1 className="title">My order</h1>
+				</div>
                 <div className="my-order-content">
                     <div className="order">
                         <p>
-                            <span>03.25.21</span>
-                            <span>6 articles</span>
+                            <span> {today} </span>
+                            <span> {state.cart.length} articles</span>
                         </p>
-                        <p>$560.00</p>
+                        <p>$ {sumTotal()}</p>
                     </div>
                 </div>
-                <OrderItem />
+                {state.cart.map(product => <OrderItem key={`orderItem-${product.id}`} product={product} />)}
             </div>
+            <div className='bottomCheckout'></div>
         </div>
     );
 }

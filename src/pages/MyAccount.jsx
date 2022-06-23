@@ -1,7 +1,16 @@
 import React from 'react';
-import '../styles/Login.scss';
+import '@styles/Login.scss';
+import { useNavigate } from 'react-router-dom';
+
 
 const MyAccount = () => {
+
+    let navigate = useNavigate();
+
+    const handleSubmit = () => {
+        navigate('/NewPassword');
+    }
+
     return (
         <div className="login">
         <div className="form-container">
@@ -15,7 +24,7 @@ const MyAccount = () => {
                     <label for="password" className="label">Password</label>
                     <p className="value">*********</p>
                 </div>
-                <input type="submit" value="Edit" className="secondary-button" />
+                <input type="submit" value="Edit" className="secondary-button" onClick={handleSubmit} />
             </form>
         </div>
     </div>

@@ -1,6 +1,12 @@
 /* vista del main de la app y desktop -------------------------------------------- */
+.top-container{
+    height: 100px;
+    background-color: white;
+}
 .cards-container{
     display: grid;
+    position: top absolute;
+    top: 100px;
     grid-template-columns: repeat(auto-fill,240px);
     gap: 26px;
     place-content: center;
@@ -49,10 +55,14 @@
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
     padding: 20px 20px 0 20px;
-    position: absolute; //nuevo
-	top: 60px;
+    position: fixed; //nuevo
+	top: 72px;
 	right: 50px;
     background-color: white;
+    z-index: 10000;
+}
+.title2:hover{
+    color: var(--hospital-green);
 }
 .desktop-menu ul {
     list-style: none;
@@ -87,12 +97,13 @@
     justify-content: space-between;
     height: 80vh;
     padding: 24px;
-    position: absolute; //nuevo
-	top: 20px;
-	left: 50px;
+    position: fixed; //nuevo
+	top: 72px;
+	left: 0px;
     background-color: white;
     border: 1px solid var(--very-light-pink);
     border-radius: 6px;
+    z-index: 10;
 }
 .mobile-menu a{
     text-decoration: none;
@@ -123,12 +134,6 @@
     color: var(--hospital-green);
 }
 /* estilos para el store de la app --------------------------------------------- */
-.my-order{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    place-items: center;
-}
 .title{
     font-size: var(--lg);
     margin-bottom: 40px;
@@ -197,13 +202,30 @@
 /* estilos de my orders ________________________________________________________ */
 .my-order{
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: grid;
     place-items: center;
+    position: fixed;
+	top: 73px;
+	right: 0;
+	left: 0;
+	bottom: 40px;
+	background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+	animation: swipeDown 0.50s ease;
+}
+.bottomCheckout{
+    width: 100%;
+    height: 100px;
+    background-color: white;
 }
 .title{
     font-size: var(--lg);
     margin-bottom: 40px;
+}.title:hover{
+    cursor: pointer;
+    color: var(--hospital-green);
 }
 .my-order-container{
     display: grid;
@@ -241,6 +263,9 @@
 nav{
     padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);
+    position: fixed;
+    background-color: white;
+    width: 100%;
 }
 .container-menu{
     width: 100%;
@@ -277,6 +302,9 @@ nav{
     color: var(--hospital-green);
     border: 1px solid var(--hospital-green);
 }
+.navbar-right{
+    padding-right: 40px;
+}
 .navbar-right ul li{
     padding: 8px;
 }
@@ -290,6 +318,9 @@ nav{
 }
 .navbar-shopping-car{
     position: relative;
+}
+.navbar-shopping-car:hover{
+    cursor: pointer;
 }
 .navbar-shopping-car div{
     width: 16px;
@@ -319,7 +350,6 @@ nav{
     position: absolute;
     top: 24px;
     left: 24px;
-    z-index: 2;
     padding: 12px;
     border-radius: 50%;
 }
@@ -377,6 +407,7 @@ nav{
     box-sizing: border-box;
     position: absolute;
     right: 0;
+    right: 44px;
     bottom: auto;
     overflow-y: auto;
     height: 350px;
@@ -388,9 +419,16 @@ nav{
 .title-container{
     display: flex;
 }
+.title-container p:hover{
+    cursor: pointer;
+    color: var(--hospital-green);
+}
 .title-container img{
     transform: rotate(180deg);
     margin-right: 14px;
+}
+.title-container img:hover{
+    cursor: pointer;
 }
 .title-cart{
     font-weight: bold;

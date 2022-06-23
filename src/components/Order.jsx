@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/Other.scss';
-import Flecha from '../../public/images/icons/flechita.svg';
+import '@styles/Other.scss';
+import Flecha from '@icon/flechita.svg';
 
 const Order = () => {
     return (

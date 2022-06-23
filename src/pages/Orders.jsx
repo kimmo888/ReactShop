@@ -1,16 +1,19 @@
-import React from 'react';
-import OrderItem from '../components/OrderItem';
-import '../styles/Other.scss';
+import React, {useContext} from 'react';
+import OrderItem from '@components/OrderItem';
+import AppContext from '@context/AppContext';
+import '@styles/Other.scss';
 
-const Orders = () => {
+const Orders = ({setToggleOrders}) => {
+    const { state } = useContext(AppContext);
     return (
-        <div class="my-order">
-            <div class="my-order-container">
-                <h1 class="title">My Order</h1>
-                <div class="my-order-content">
-                    <OrderItem />
+        <div className="my-order">
+            <div className="my-order-container">
+                <h1 className="title" onClick={() => setToggleOrders(false)} >My Orders </h1>
+                <div className="my-order-content">
+                {state.cart.map(product => <OrderItem key={`orderItem-${product.id}`} product={product} />)}
                 </div>
             </div>
+            <div className='bottomCheckout'></div>
         </div>
     )
 }

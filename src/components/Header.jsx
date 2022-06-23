@@ -2,12 +2,12 @@ import React, {useState, useContext } from 'react';
 import '@styles/Other.scss';
 import Menu from '@components/Menu';
 import MobileMenu from '@components/MobileMenu';
-import MyOrder from '../containers/MyOrder';
-import logo from '../Assets/logos/logo_yard_sale.svg';
-import AppContext from '../context/AppContext';
-import iconMenu from '../Assets/icons/icon_menu.svg';
-import iconShoppingCar from '../../public/images/icons/icon_shopping_cart.svg';
-//import logo from '@logos/logo_yard_sale.svg'  //usando alias
+import MyOrder from '@containers/MyOrder';
+import logo from '@logos/logo_yard_sale.svg';
+import AppContext from '@context/AppContext';
+import iconMenu from '@icon/icon_menu.svg';
+import iconShoppingCar from '@icon/icon_shopping_cart.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
@@ -32,22 +32,22 @@ const Header = () => {
             <img src={logo} alt="logo" className="logo1"/>
             <ul>
                 <li>
-                    <a href="/">all</a>
+                    <Link to="/">all</Link>
                 </li>
                 <li>
-                    <a href="/">Clothes</a>
+                    <Link to="/">Clothes</Link>
                 </li>
                 <li>
-                    <a href="/">Electronics</a>
+                    <Link to="/">Electronics</Link>
                 </li>
                 <li>
-                    <a href="/">Furnitures</a>
+                    <Link to="/">Furnitures</Link>
                 </li>
                 <li>
-                    <a href="/">Toys</a>
+                    <Link to="/">Toys</Link>
                 </li>
                 <li>
-                    <a href="/">Others</a>
+                    <Link to="/">Others</Link>
                 </li>
             </ul>
         </div>

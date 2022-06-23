@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import '../styles/Other.scss';
-import AppContext from '../context/AppContext';  //agregamos AppContext
+import '@styles/Other.scss';
+import AppContext from '@context/AppContext';  //agregamos AppContext
 import ButtonAdd from '@icon/bt_add_to_cart.svg';
 
 const ProductItem = ( {product} ) => { // poner el parámetro a iterar en este caso product que es el resultado de el hooks useGetProducts.js

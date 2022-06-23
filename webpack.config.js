@@ -15,7 +15,8 @@ module.exports = {
         extensions: ['.js', '.jsx'],
         alias: {
             '@components':  path.resolve(__dirname, 'src/components/'),
-            '@container':   path.resolve(__dirname, 'src/containers/'),
+            '@containers':  path.resolve(__dirname, 'src/containers/'),
+            '@context':     path.resolve(__dirname, 'src/context/'),
             '@icon':        path.resolve(__dirname, 'src/Assets/icons/'),
             '@logos':       path.resolve(__dirname, 'src/Assets/logos/'),
             '@pages':       path.resolve(__dirname, 'src/pages/'),
@@ -72,7 +73,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         },
         historyApiFallback: true,
-        port: 3006,
+        port: 3008,
         open: true
     },
 }
