@@ -35,7 +35,7 @@ const Header = () => {
                     <Link to="/">all</Link>
                 </li>
                 <li>
-                    <a href="/ReactShop/">Clothes</a>
+                    <Link to="/">Clothes</Link>
                 </li>
                 <li>
                     <Link to="/">Electronics</Link>

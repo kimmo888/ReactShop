@@ -4,6 +4,7 @@
     height: 80vh;
     display: grid;
     place-items: center;
+    z-index: 100000;
 }
 .form-container{
     display: grid;
@@ -144,6 +145,8 @@
     }
     .form-container{
         height: 100%;
+        margin-top: 200px;
+        background-color: white;
     }
     .form{
         height: 100%;
