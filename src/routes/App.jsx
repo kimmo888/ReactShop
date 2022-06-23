@@ -20,7 +20,7 @@ const App = () => {
     const initialState = useInitialState(); //agregamos esta linea
     return(
         <AppContext.Provider value={initialState}> {/* damos el valor initialState */}
-            <BrowserRouter> {/* basename='/ReactShop/'  */}
+            <BrowserRouter > {/* basename='/ReactShop/'  este es para poder hacer deploy en github pages*/}
                 <Layout>
                     <Routes>
                         <Route exact path='/' element={ <Home /> } />

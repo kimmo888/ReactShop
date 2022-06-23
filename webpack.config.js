@@ -8,8 +8,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: '/',
+        filename: 'bundle.js',  //'ReactShop/bundle.js'  // es para poder hacer deploy en github pages
+        publicPath: '/', // '/ReactShop/' es para poder hacer deploy en github pages
     },
     resolve: {
         extensions: ['.js', '.jsx'],
@@ -73,7 +73,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         },
         historyApiFallback: true,
-        port: 3008,
+        port: 3006,
         open: true
     },
 }
