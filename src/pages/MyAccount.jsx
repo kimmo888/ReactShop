@@ -24,8 +24,8 @@ const MyAccount = () => {
                     <label for="password" className="label">Password</label>
                     <p className="value">*********</p>
                 </div>
-                <input type="submit" value="Edit" className="secondary-button" onClick={handleSubmit} />
             </form>
+                <button  className="secondary-button" onClick={handleSubmit} >Edit</button>
         </div>
     </div>
     )
